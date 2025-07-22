@@ -4,6 +4,8 @@
 # Identify the package manager based on lock file presence
 if [ -f "pnpm-lock.yaml" ]; then
   LS_CMD="pnpm lint-staged"
+elif [ -f "bun.lock" ]; then
+  LS_CMD="bun run lint-staged"
 elif [ -f "yarn.lock" ]; then
   LS_CMD="yarn lint-staged"
 else

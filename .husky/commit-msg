@@ -4,6 +4,8 @@
 # Identify the package manager based on lock file presence
 if [ -f "pnpm-lock.yaml" ]; then
   CL_CMD="pnpm commitlint"
+elif [ -f "bun.lock" ]; then
+  CL_CMD="bun run commitlint"
 elif [ -f "yarn.lock" ]; then
   CL_CMD="yarn commitlint"
 else
