@@ -1,17 +1,32 @@
 {
-  "$schema": "https://biomejs.dev/schemas/1.8.1/schema.json",
-  "organizeImports": {
-    "enabled": true
+  "$schema": "https://biomejs.dev/schemas/2.1.2/schema.json",
+  "vcs": {
+    "enabled": false,
+    "clientKind": "git",
+    "useIgnoreFile": false
   },
   "files": {
-    "ignore": ["node_modules", "dist", "public", "src/router.ts"]
+    "ignoreUnknown": false,
+    "includes": [
+      "**",
+      "!**/node_modules",
+      "!**/dist",
+      "!**/public",
+      "!**/env.d.ts"
+    ]
   },
+  "assist": { "actions": { "source": { "organizeImports": "on" } } },
   "linter": {
     "enabled": true,
     "rules": {
       "recommended": true,
       "style": {
         "noNonNullAssertion": "off"
+      },
+      "correctness": {
+        "noUnusedVariables": "off",
+        "noUnusedFunctionParameters": "warn",
+        "noUnusedImports": "off"
       }
     }
   },
@@ -25,7 +40,7 @@
     "formatter": {
       "semicolons": "always",
       "arrowParentheses": "asNeeded",
-      "quoteStyle": "single",
+      "quoteStyle": "double",
       "trailingCommas": "all"
     }
   }

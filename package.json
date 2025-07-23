@@ -3,7 +3,14 @@
   "private": true,
   "version": "0.0.1",
   "type": "module",
-  "author": "Abdul Malik <up2dul@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/up2dul/rvtb.git"
+  },
+  "author": {
+    "name": "Abdul Malik",
+    "email": "up2dul@gmail.com"
+  },
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
@@ -15,21 +22,21 @@
     "commitlint": "commitlint --edit"
   },
   "dependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
   },
   "devDependencies": {
-    "@biomejs/biome": "^1.8.1",
-    "@commitlint/cli": "^19.3.0",
-    "@commitlint/config-conventional": "^19.2.2",
-    "@types/node": "^20.14.2",
-    "@types/react": "^18.2.66",
-    "@types/react-dom": "^18.2.22",
-    "@vitejs/plugin-react-swc": "^3.5.0",
-    "husky": "^9.0.11",
-    "lint-staged": "^15.2.7",
-    "typescript": "^5.2.2",
-    "vite": "^5.2.0"
+    "@biomejs/biome": "^2.1.2",
+    "@commitlint/cli": "^19.8.1",
+    "@commitlint/config-conventional": "^19.8.1",
+    "@types/node": "^24.0.15",
+    "@types/react": "^19.1.8",
+    "@types/react-dom": "^19.1.6",
+    "@vitejs/plugin-react-swc": "^3.11.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.1.2",
+    "typescript": "^5.8.3",
+    "vite": "^7.0.5"
   },
   "lint-staged": {
     "*.{js,ts,jsx,tsx}": "biome check --write"
